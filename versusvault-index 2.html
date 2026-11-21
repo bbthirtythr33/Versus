@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#090d18">
+<title>VersusVault — Who Would Win?</title>
+<style>
+:root{color-scheme:dark;--bg:#090d18;--panel:#111a2b;--panel2:#172238;--line:#293852;--muted:#9aabc5;--text:#f3f6fc;--accent:#8b7cff;--accent2:#43d5c2;--danger:#ff7188}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -15%,#25345c 0,transparent 48%),var(--bg);color:var(--text);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.wrap{max-width:900px;margin:auto;padding:22px 16px 60px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:25px}
+.brand{display:flex;align-items:center;gap:11px}.logo{width:43px;height:43px;border-radius:14px;background:linear-gradient(135deg,#8b7cff,#43d5c2);display:grid;place-items:center;color:#07111c;font-size:23px;font-weight:900;box-shadow:0 8px 30px #6556ce44}
+h1{font-size:21px;letter-spacing:1.8px;margin:0;font-weight:900}.tag{font-size:11px;color:var(--muted);letter-spacing:2px;text-transform:uppercase}
+.pill{border:1px solid var(--line);color:#c4d0e4;padding:6px 10px;border-radius:99px;font-size:11px;white-space:nowrap}
+.hero{text-align:center;margin:25px 0 24px}.hero h2{font-size:clamp(29px,7vw,46px);line-height:1.08;margin:0 0 10px;letter-spacing:-1.4px}.hero h2 span{color:var(--accent2)}.hero p{color:var(--muted);margin:0 auto;max-width:560px}
+.panel{background:linear-gradient(180deg,#141f33,#101827);border:1px solid var(--line);border-radius:20px;padding:17px;margin:14px 0;box-shadow:0 12px 35px #0003}
+.section-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:13px}.section-head h3{margin:0;font-size:16px}.eyebrow{font-size:10px;letter-spacing:1.7px;color:var(--accent2);text-transform:uppercase;font-weight:800}
+.mode{display:flex;background:#0b1220;border:1px solid var(--line);border-radius:12px;padding:4px;gap:4px}.mode button{flex:1;background:transparent;border:0;color:var(--muted);padding:10px;border-radius:9px;font-weight:700}.mode button.active{background:#29345a;color:white;box-shadow:inset 0 0 0 1px #6556ce}
+.teams{display:grid;grid-template-columns:1fr 1fr;gap:12px}.team{background:#0c1422;border:1px solid var(--line);border-radius:15px;padding:13px;min-width:0}.team h4{margin:0 0 12px;font-size:13px;letter-spacing:1px;text-transform:uppercase}.team.a h4{color:#a99cff}.team.b h4{color:#55dfd0}
+.field{display:block;margin:0 0 10px}.field span{display:block;color:#aebbd0;font-size:11px;font-weight:700;margin:0 0 5px}.field input,.field textarea,.field select{width:100%;background:#111d30;color:var(--text);border:1px solid #31415c;border-radius:10px;padding:11px 10px;font:inherit;font-size:14px;min-width:0;outline:none}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--accent);box-shadow:0 0 0 2px #8b7cff22}.field textarea{resize:vertical;min-height:58px}.field input::placeholder,.field textarea::placeholder{color:#71819a}
+.member{border:1px solid #293852;border-radius:12px;padding:11px;margin-bottom:10px;background:#111b2b}.member-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}.member-top strong{font-size:12px;color:#cbd6e8}.remove{background:transparent;border:0;color:#ff8195;font-size:19px;padding:0 4px}
+.add{width:100%;border:1px dashed #526482;border-radius:10px;background:#101a2a;color:#c9d4e8;padding:10px;font-weight:700}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.hint{font-size:11px;color:var(--muted);margin:8px 0 0}
+.primary{width:100%;border:0;border-radius:13px;padding:15px 16px;background:linear-gradient(100deg,#7968f2,#39bfb6);color:#07111c;font-size:16px;font-weight:900;letter-spacing:.2px;box-shadow:0 9px 24px #5c57cb38}
+.primary:disabled{opacity:.55}.status{margin-top:12px;border-radius:11px;padding:12px;background:#101b2c;border:1px solid var(--line);color:#bdc9dc;font-size:13px;display:none}.status.show{display:block}
+.result{display:none}.result.show{display:block}.winner{font-size:24px;font-weight:900;margin:4px 0 12px}.barrow{margin:12px 0}.barlabel{display:flex;justify-content:space-between;font-weight:750;font-size:13px;margin-bottom:6px}.bar{height:10px;border-radius:99px;background:#26344b;overflow:hidden}.fill{height:100%;border-radius:99px;background:linear-gradient(90deg,#8b7cff,#43d5c2)}
+.result h4{margin:19px 0 6px;font-size:13px;color:#9fe8df;text-transform:uppercase;letter-spacing:1px}.result p{margin:5px 0;color:#d2dced}.disclaimer{font-size:11px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px;margin-top:17px}
+footer{text-align:center;color:#70819b;font-size:11px;margin:24px 0 0}
+@media(max-width:620px){.wrap{padding:16px 12px 45px}.teams{grid-template-columns:1fr}.team{padding:12px}.hero{margin:22px 0}.panel{padding:14px}.top{margin-bottom:20px}.pill{font-size:10px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand"><div class="logo">V</div><div><h1>VERSUSVAULT</h1><div class="tag">Fictional fight analysis</div></div></div>
+    <div class="pill">BETA BUILD 01</div>
+  </header>
+  <section class="hero"><h2>WHO WOULD <span>WIN?</span></h2><p>Build a matchup from any fictional universe. Pick the versions, set the conditions, and examine how the battle could play out.</p></section>
+
+  <section class="panel">
+    <div class="section-head"><div><div class="eyebrow">01 / Match format</div><h3>Choose your matchup</h3></div></div>
+    <div class="mode" role="tablist" aria-label="Match format">
+      <button id="soloBtn" class="active" type="button">1 vs 1</button><button id="teamBtn" type="button">Team battle</button>
+    </div>
+    <p class="hint">Team battles let you add multiple characters to either side.</p>
+  </section>
+
+  <section class="panel">
+    <div class="section-head"><div><div class="eyebrow">02 / Fighters</div><h3>Build both sides</h3></div></div>
+    <div class="teams">
+      <div class="team a"><h4>Team A</h4><div id="teamA"></div><button class="add" id="addA" type="button">＋ Add character</button></div>
+      <div class="team b"><h4>Team B</h4><div id="teamB"></div><button class="add" id="addB" type="button">＋ Add character</button></div>
+    </div>
+    <p class="hint">Use the version field to be precise: for example, “MCU, Endgame” or “DC Comics, Rebirth.” Add equipment and relevant details if they matter.</p>
+  </section>
+
+  <section class="panel">
+    <div class="section-head"><div><div class="eyebrow">03 / Battle rules</div><h3>Set the conditions</h3></div></div>
+    <div class="grid2">
+      <label class="field"><span>Equipment & power level</span><select id="gear"><option>Standard equipment and abilities</option><option>Strongest available equipment for selected version</option><option>No weapons or external equipment</option><option>Custom rules (explain below)</option></select></label>
+      <label class="field"><span>Starting distance</span><select id="distance"><option>50 feet apart</option><option>100 feet apart</option><option>500 feet apart</option><option>Across a large battlefield</option><option>Surprise encounter</option></select></label>
+      <label class="field"><span>Knowledge of opponent</span><select id="knowledge"><option>No prior knowledge</option><option>Basic knowledge</option><option>Full knowledge of abilities</option></select></label>
+      <label class="field"><span>Victory condition</span><select id="victory"><option>Incapacitation or surrender</option><option>Death / permanent defeat</option><option>Ring-out / forced retreat</option><option>Objective-based victory</option></select></label>
+    </div>
+    <label class="field"><span>Battle location / custom rules (optional)</span><textarea id="scenario" placeholder="Example: Abandoned New York, no outside help, both sides are willing to fight..."></textarea></label>
+  </section>
+
+  <button class="primary" id="analyze" type="button">⚡ ANALYZE THIS MATCHUP</button>
+  <div class="status" id="status" role="status"></div>
+
+  <section class="panel result" id="result">
+    <div class="eyebrow">04 / Match report</div><div class="winner" id="winner"></div><div id="probabilities"></div>
+    <h4>Why this side has the advantage</h4><p id="verdict"></p>
+    <h4>How the battle could unfold</h4><div id="breakdown"></div>
+    <h4>Key factors & counters</h4><div id="factors"></div>
+    <div class="disclaimer" id="caveats"></div>
+  </section>
+  <footer>VERSUSVAULT · Fictional matchup analysis · Results are estimates, not objective facts.</footer>
+</div>
+<script>
+/*
+  VersusVault front end.
+  When the private analysis backend is ready, set API_URL to its HTTPS endpoint.
+  Expected POST JSON: { teams, rules }
+  Expected response JSON:
+  { winner: "Team A", probabilities: [{team:"Team A",percent:60},{team:"Team B",percent:40}],
+    verdict:"...", breakdown:["..."], factors:["..."], caveats:"..." }
+*/
+const API_URL = "";
+const $ = id => document.getElementById(id);
+let mode = "solo";
+let counts = {A:1,B:1};
+
+function memberHTML(side,n){
+  return `<div class="member" data-member="${n}">
+    <div class="member-top"><strong>FIGHTER ${n}</strong>${n>1?`<button class="remove" type="button" aria-label="Remove character" data-remove="${side}">×</button>`:""}</div>
+    <label class="field"><span>Character name *</span><input data-key="name" placeholder="e.g. Darth Vader" autocomplete="off"></label>
+    <label class="field"><span>Universe / franchise</span><input data-key="universe" placeholder="e.g. Star Wars"></label>
+    <label class="field"><span>Version / continuity *</span><input data-key="version" placeholder="e.g. Canon, original trilogy"></label>
+    <label class="field"><span>Equipment / abilities (optional)</span><textarea data-key="details" placeholder="e.g. Red lightsaber, Force abilities"></textarea></label>
+  </div>`;
+}
+function renderTeam(side){
+  const host=$(side==="A"?"teamA":"teamB");
+  host.innerHTML=Array.from({length:counts[side]},(_,i)=>memberHTML(side,i+1)).join("");
+}
+function setMode(next){
+  mode=next;
+  $("soloBtn").classList.toggle("active",mode==="solo");
+  $("teamBtn").classList.toggle("active",mode==="team");
+  if(mode==="solo"){counts.A=1;counts.B=1;renderTeam("A");renderTeam("B");}
+  $("addA").style.display=mode==="team"?"block":"none";
+  $("addB").style.display=mode==="team"?"block":"none";
+}
+$("soloBtn").addEventListener("click",()=>setMode("solo"));
+$("teamBtn").addEventListener("click",()=>setMode("team"));
+$("addA").addEventListener("click",()=>{if(counts.A<8){counts.A++;renderTeam("A")}});
+$("addB").addEventListener("click",()=>{if(counts.B<8){counts.B++;renderTeam("B")}});
+document.addEventListener("click",e=>{
+  const side=e.target.dataset.remove;
+  if(side && counts[side]>1){counts[side]--;renderTeam(side);}
+});
+renderTeam("A");renderTeam("B");setMode("solo");
+
+function readTeam(side){
+  const host=$(side==="A"?"teamA":"teamB");
+  return [...host.querySelectorAll(".member")].map(card=>{
+    const val=key=>card.querySelector(`[data-key="${key}"]`).value.trim();
+    return {name:val("name"),universe:val("universe"),version:val("version"),details:val("details")};
+  });
+}
+function showStatus(message){$("status").textContent=message;$("status").classList.add("show")}
+function safeText(s){return String(s??"")}
+function renderReport(data){
+  $("winner").textContent=data.winner?`Predicted winner: ${data.winner}`:"Matchup analysis";
+  $("probabilities").innerHTML="";
+  (data.probabilities||[]).forEach(item=>{
+    const pct=Math.max(0,Math.min(100,Number(item.percent)||0));
+    const row=document.createElement("div");row.className="barrow";
+    const label=document.createElement("div");label.className="barlabel";
+    const name=document.createElement("span");name.textContent=item.team;
+    const score=document.createElement("span");score.textContent=pct+"%";
+    label.append(name,score);
+    const bar=document.createElement("div");bar.className="bar";
+    const fill=document.createElement("div");fill.className="fill";fill.style.width=pct+"%";bar.append(fill);
+    row.append(label,bar);$("probabilities").append(row);
+  });
+  $("verdict").textContent=safeText(data.verdict);
+  const addLines=(id,items)=>{const node=$(id);node.innerHTML="";(items||[]).forEach(line=>{const p=document.createElement("p");p.textContent="• "+line;node.append(p);});};
+  addLines("breakdown",data.breakdown);addLines("factors",data.factors);
+  $("caveats").textContent=safeText(data.caveats||"Probabilities are reasoned estimates. Different interpretations of canon, feats, and character behavior can change the outcome.");
+  $("result").classList.add("show");
+  $("result").scrollIntoView({behavior:"smooth",block:"start"});
+}
+$("analyze").addEventListener("click",async()=>{
+  const teams={A:readTeam("A"),B:readTeam("B")};
+  for(const side of ["A","B"]){
+    if(teams[side].some(c=>!c.name||!c.version)){showStatus(`Please enter a character name and version for every fighter on Team ${side}.`);return;}
+  }
+  const rules={format:mode,equipment:$("gear").value,distance:$("distance").value,knowledge:$("knowledge").value,victory:$("victory").value,scenario:$("scenario").value.trim()};
+  if(!API_URL){showStatus("Your matchup builder is ready. The AI analysis connection is the next build step; it is not connected yet, so this version won't invent win percentages or pretend a demo result is real.");return;}
+  $("analyze").disabled=true;$("analyze").textContent="ANALYZING...";
+  showStatus("Comparing versions, abilities, feats, counters, and battle conditions…");
+  try{
+    const response=await fetch(API_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({teams,rules})});
+    if(!response.ok)throw new Error("The analysis service returned an error ("+response.status+").");
+    const data=await response.json();renderReport(data);showStatus("Analysis complete.");
+  }catch(err){showStatus("Couldn't complete the analysis: "+err.message);}
+  finally{$("analyze").disabled=false;$("analyze").textContent="⚡ ANALYZE THIS MATCHUP";}
+});
+</script>
+</body>
+</html>
